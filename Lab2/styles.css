@@ -3,6 +3,8 @@
     box-sizing: border-box;
     font-family: Gotham Rounded, sans-serif;
 }
+
+/*the background around the clock*/
 body 
 {
     background: linear-gradient(to right, hsl(300, 100%, 70%), hsl(256, 100%, 50%));
@@ -12,6 +14,7 @@ body
     overflow: hidden;
 }
 
+/*the body of the clock*/
 .clock
 {
     width: 600px;
@@ -22,6 +25,7 @@ body
     position: relative;
 }
 
+/*For the number to go in cirlces and not straight lines*/
 .clock .number
 {
     --rotation: 0;
@@ -33,6 +37,7 @@ body
     font-size: 2rem;
 }
 
+/*clock numbers position*/
 .clock .number1{ --rotation: 30deg}
 .clock .number2{ --rotation: 60deg}
 .clock .number3{ --rotation: 90deg}
@@ -45,6 +50,16 @@ body
 .clock .number10{ --rotation: 300deg}
 .clock .number11{ --rotation: 330deg}
  
+/*The label of my last name*/
+.label
+{
+    position: absolute;
+    top: 19vmin;
+    left: 45%;
+    font-size: 3vmin;
+}
+
+/*hands go around the center and not in a straight line*/
 .clock .hand
 {
     --rotation: 0;
@@ -60,24 +75,28 @@ body
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 
+/*The center dot of the clock*/
 .clock::after
 {
     content: '';
     position: absolute;
     background-color: black;
     z-index: 11;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
-.clock .hand.second
+
+/* clock hands with shandow*/
+.clock .hand.second 
 {
     width: 4px;
     height: 45%;
     background-color: red;
+    box-shadow: -10px 10px 10px rgba(255, 0, 0, 0.4);
 }
 
 .clock .hand.minute
@@ -85,11 +104,13 @@ body
     width: 7px;
     height: 43%;
     background-color: black;
+    box-shadow: -10px 10px 10px rgba(0,0,0,.4);
 }
 
 .clock .hand.hour
 {
-    width: 10px;
+    width: 12px;
     height: 35%;
     background-color: black;
+    box-shadow: -10px 10px 10px rgba(0,0,0,.4);
 }
