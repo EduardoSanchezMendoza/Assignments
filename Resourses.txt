@@ -1,1 +1,5 @@
 https://www.youtube.com/watch?v=D3CDmRjPdcE
+https://www.youtube.com/watch?v=D3CDmRjPdcE&t=1s
+https://skillcrush.com/blog/projects-you-can-do-with-javascript/
+https://www.elated.com/creating-a-javascript-clock/
+https://www.youtube.com/watch?v=Ki0XXrlKlHY
