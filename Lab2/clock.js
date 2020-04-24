@@ -1,9 +1,11 @@
 setInterval(setClock, 1000)
 
+/*const of these will take the actual time*/
 const hourHand = document.querySelector('[data-hour-hand]')
 const minuteHand = document.querySelector('[data-minute-hand]')
 const secondHand = document.querySelector('[data-second-hand]')
 
+/*function of taking real time and moving the clock*/
 function setClock()
 {
     const currentData = new Date()
@@ -15,6 +17,7 @@ function setClock()
     setRotation(hourHand, hoursRatio)
 }
 
+/*function of the actual movement of the hands*/
 function setRotation(element, rotationRatio)
 {
     element.style.setProperty('--rotation', rotationRatio * 360)
